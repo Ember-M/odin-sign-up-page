@@ -57,6 +57,7 @@ table {
 
 .leftContainer{
     display: flex;
+    flex-direction: column;
     width: 40vw;
     height: 100vh;
     background-image: url("background.jpg");
@@ -74,7 +75,14 @@ table {
     height: 20vh;
     width: 100%;
     margin-top: 20vh;
-    background-color: rgba(255, 255, 255, 0.507);
+    background-color: rgba(255, 255, 255, 0.432);
+}
+.attribution{
+    margin-top: auto;
+    text-align: center;
+    align-self: center;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.192);
 }
 .logoContainer{
     margin-left: 15%;
@@ -85,20 +93,28 @@ table {
     max-height: auto;
     max-width: auto;
     font-size: 5vw;
-    margin-top: 45px;
+    margin-top: 50px;
     text-align: center;
     font-family: 'Satisfy', cursive;
+    color: rgb(49, 49, 49);
 }
 .logo{
     max-width: 100%;
     max-height: 100%;
 }
-
+.signupTextContainer{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 10vh;
+    min-height: 30vh;
+    width: 100%;
+}
 .signupText,.signupTexth2{
-    font-weight:600;
-    margin-top: 30px;
-    margin-left: 50px;
-    margin-bottom: 30px;
+    font-weight: 600;
+
+    margin-left: 25px;
+
     padding-right: 100px;
     font-family: 'Raleway', sans-serif;
 
@@ -109,25 +125,79 @@ table {
 .signupTexth2{
     font-size: calc(8px + 1.5vh);
 }
-
 em{
     font-size: 0.25rem;
 }
-.signupTextContainer{
-    
-    margin-top: 10vh;
-    min-height: 30vh;
-    width: 100%;
 
-}
 .signupForm{
+    display: flex;
     min-height: 30vh;
     width: 100%;
-    background-color: #fff;
+}
 
+.formList{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(77, 77, 77);
+    font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    
+    height: 100%;
+    box-shadow: 5px 2px 5px rgba(128, 128, 128, 0.678);
+}
+
+.formList>div{
+    margin-left: 25px;
+    width: 35%;
+    padding: 10px;
+}
+.formList>div>input{
+    font-family: 'Raleway', sans-serif;
+    color: rgba(77, 77, 77, 0.644);
+    font-weight: 600;
+    width: 60%;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px rgba(128, 128, 128, 0.363) solid;
+}
+.formList>div>input:focus{
+    outline: none;
+    border: 2px lightskyblue solid;
+    box-shadow: 5px 5px 10px 0px #4E90E0;
+    
+}
+#password:invalid, #password_confirm:invalid{
+    border: 2px rgb(255, 0, 0) solid;
+    box-shadow: 3px 3px 5px 0px #c71212;
+}
+#password:valid, #password_confirm:valid{
+    border: 2px rgb(32, 253, 2) solid;
+    box-shadow: 3px 3px 5px 0px #11ff1d;
 }
 .signupButtons{
+    display: flex;
+    flex-direction: column;
     min-height: 30vh;
     width: 100%;
-    background-color:cadetblue;
+}
+.signupButtons>button{
+    font-family: 'Raleway', sans-serif;
+    margin-top: 40px;
+    margin-left: 40px;
+    height: 75px;
+    width: 300px;
+    border-radius: 8px;
+    background-color: rgba(70, 89, 98, 0.781);
+    box-shadow: 3px 3px 5px 0px black;
+    font-size: 1.5rem;
+    color: azure;
+}
+
+.bottomText{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-left: 40px;
+
 }

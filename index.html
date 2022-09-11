@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Please sign up! Please!</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,14 +19,53 @@
                 <div class="logoContainer"><img class="logo" src="logo.png" alt="It's the logo!"></div>
                 <div class="textContainer">TECH</div>
             </div>
+            <div class="attribution">Photo by <a href="https://unsplash.com/@eugene_golovesov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Eugene Golovesov</a> on <a href="https://unsplash.com/t/textures-patterns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </div>
         </div>
         <div class="rightContainer">
             <div class="signupTextContainer"><h1 class="signupText">Please, god, please sign up! We need your clicks, we need your attention, and more than anything else, we need your ad revenue!</h1>
             <h1 class="signupText">Sign up today and receive 10% off your first purchase!<em> (as long as you sign up for a year's membership)</em></h1>
             <h2 class="signupTexth2">Sign up below to get started!</h2>
         </div>
-            <div class="signupForm"></div>
-            <div class="signupButtons"></div>
+            <div class="signupForm">
+                <form id="signup" action="" method="post">
+                    
+                    <div class="formList">
+                        
+                        <div>
+                        <label for="first_name">First Name</label>
+                        <br>
+                        <input type="text" id="first_name" name="first-name" required></div>
+                        
+                        <div>
+                        <label for="last_name">Last Name</label>
+                        <br>
+                        <input type="text" id="last_name" name="last-name" required></div>
+                        
+                        <div>
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" id="email" name="email" placeholder="test@example.com" required></div>
+                        
+                        <div>
+                        <label for="phone">Phone Number</label>
+                        <br>   
+                        <input type="tel" id="phone" name="phone" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" placeholder="000-000-0000" required></div>
+                        
+                        <div>
+                        <label for="password">Password</label>
+                        <br>    
+                        <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8,}$" title="Must contain at least one number and one uppercase and lowercase letter, one special character, and at least 8 or more characters" required></div>
+                        
+                        <div>
+                        <label for="password_confirm">Confirm Password</label>
+                        <br>
+                        <input type="password" id="password_confirm" pattern="^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8,}$" title="Must contain at least one number and one uppercase and lowercase letter, one special character, and at least 8 or more characters" required></div>
+                        </div>
+                </form>
+            </div>
+            <div class="signupButtons"><button type="submit" form="signup">Create Your Account!</button>
+            <p class="bottomText">Already have one? <a href="./index.html">Log In!</a></p></div>
         </div>
     </div>
 </body>
